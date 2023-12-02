@@ -1,0 +1,24 @@
+---
+- name: Create homefolder bin
+  file:
+    path: ~/bin
+    state: directory
+    mode: 0755
+
+- name: Ensure golang src directory exists
+  file:
+    path: ~/golang/src
+    state: directory
+    mode: 0755
+
+- name: create git link to golang src directory
+  file:
+    src: ~/golang/src
+    dest: ~/git
+    state: link
+
+- name: create screenshot folder
+  file:
+    path: ~/Desktop/Screenshots
+    state: directory
+    mode: 0755

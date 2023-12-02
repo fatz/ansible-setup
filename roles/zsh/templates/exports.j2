@@ -1,0 +1,4 @@
+# set export variables
+{% for item in zsh_exports %}
+export {{ item.name }}={{ item.value }}
+{% endfor %}

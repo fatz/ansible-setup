@@ -1,0 +1,17 @@
+
+- name: Copy dynamic profile
+  copy:
+    src: dynamic-profile.json
+    dest: "~/Library/Application Support/iTerm2/DynamicProfiles/dynamic-profile.json"
+
+- name: Set default profile to AnsibleDynamicProfile
+  community.general.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: "Default Bookmark Guid"
+    value: "25D788AB-544A-4E6F-B9AC-BEE4CB58E0DC"
+    state: present
+
+- name: download iterm2 zsh integration
+  get_url:
+    url: https://iterm2.com/shell_integration/zsh
+    dest: ~/bin/iterm2-zsh-integration.zsh

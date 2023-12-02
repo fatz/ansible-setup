@@ -1,0 +1,45 @@
+- name: create zshrc.d directory
+  file:
+    path: ~/.zshrc.d
+    state: directory
+    mode: 0755
+
+- name: overwrite zshrc
+  copy:
+    src: .zshrc
+    dest: ~/.zshrc
+
+- name: Clone oh-my-zsh
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: ~/.oh-my-zsh
+
+- name: generate oh-my-zsh config
+  template:
+    src: oh-my-zsh-template.j2
+    dest: ~/.zshrc.d/00-oh-my-zsh.zsh
+    mode: 0644
+ 
+- name: add alias config
+  template:
+    src: alias.j2
+    dest: ~/.zshrc.d/10-aliases.zsh
+    mode: 0644
+
+- name: add exports config
+  template:
+    src: exports.j2
+    dest: ~/.zshrc.d/20-exports.zsh
+    mode: 0644
+
+- name: add asdf config
+  template:
+    src: asdf.j2
+    dest: ~/.zshrc.d/30-asdf.zsh
+    mode: 0644
+
+- name: add path config
+  template:
+    src: path.j2
+    dest: ~/.zshrc.d/40-path.zsh
+    mode: 0644

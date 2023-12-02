@@ -1,0 +1,102 @@
+osx_settings:
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    value: true
+    type: bool
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    value: true
+    type: bool
+  # Finder: show status bar
+  - domain: com.apple.finder
+    key: ShowStatusBar
+    value: true
+    type: bool
+  # Finder: show path bar
+  - domain: com.apple.finder
+    key: ShowPathbar
+    value: true
+    type: bool
+  # Finder: show POSIX path in title bar
+  - domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    value: true
+    type: bool
+  # Finder: allow text selection in Quick Look
+  - domain: com.apple.finder
+    key: QLEnableTextSelection
+    value: true
+    type: bool
+  # Finderr: search the current folder by default
+  - domain: com.apple.finder
+    key: FXDefaultSearchScope
+    value: SCcf
+    type: string
+  # Finder: disable warning when changing a file extension
+  - domain: com.apple.finder
+    key: FXEnableExtensionChangeWarning
+    value: false
+    type: bool
+  # Avoid creating .DS_Store files on network volumes
+  - domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    value: true
+    type: bool
+  # use list view in all Finder windows by default
+  - domain: com.apple.finder
+    key: FXPreferredViewStyle
+    value: Nlsv
+    type: string
+  # automatically hide and show the Dock
+  - domain: com.apple.dock
+    key: autohide
+    value: true
+    type: bool
+  # make Dock icons of hidden applications translucent
+  - domain: com.apple.dock
+    key: showhidden
+    value: true
+    type: bool
+  # enable hot corner top right to start screensaver
+  - domain: com.apple.dock
+    key: wvous-tr-corner
+    value: 5
+    type: int
+  # Trackpad: enable tap to click
+  - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    value: true
+    type: bool
+  - domain: NSGlobalDomain
+    key: com.apple.mouse.tapBehavior
+    value: 1
+    type: int
+  - domain: NSGlobalDomain
+    key: NSAutocapitalizationEnabled
+    value: false
+    type: bool
+  - domain: NSGlobalDomain
+    key: NSAutomaticDashSubstitutionEnabled
+    value: false
+    type: bool
+  - domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    value: false
+    type: bool
+  - domain: apple.screencapture
+    key: location
+    value: "$HOME/Desktop/Screenshots"
+    type: string
+  - domain: com.apple.screencapture
+    key: disable-shadow
+    value: true
+    type: bool
+  - domain: com.apple.screencapture
+    key: type
+    value: PNG
+    type: string
+  - domain: NSGlobalDomain
+    key: AppleFontSmoothing
+    value: 2
+    type: int
+  

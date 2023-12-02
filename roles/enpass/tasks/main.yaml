@@ -1,0 +1,12 @@
+---
+# check if enpass primary vault exists
+- name: check if enpass primary vault exists
+  stat:
+    path: ~/Library/Containers/in.sinew.Enpass-Desktop/Data/Documents/Vaults/primary
+  register: enpass_primary_vault
+
+# fail if enpass primary vault does not exist
+- name: fail if enpass primary vault does not exist
+  fail:
+    msg: "Please setup enpass first"
+  when: enpass_primary_vault.stat.exists == False

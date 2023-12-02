@@ -1,0 +1,25 @@
+---
+
+# add asdf plugins
+- name: install asdf plugins
+  command: asdf plugin add {{ item }}
+  loop: "{{ asdf_plugins }}"
+  register: asdf_plugins_result
+  when: asdf_plugins is defined
+  changed_when: "'already added' not in asdf_plugins_result.stdout"
+
+# install latest versions of asdf plugins
+- name: install latest versions of asdf plugins
+  command: asdf install {{ item }} latest
+  loop: "{{ asdf_plugins }}"
+  register: asdf_plugins_result
+  when: asdf_plugins is defined
+  changed_when: "'already installed' not in asdf_plugins_result.stdout"
+
+# set global latest versions of asdf plugins
+- name: set global latest versions of asdf plugins
+  command: asdf global {{ item }} latest
+  loop: "{{ asdf_plugins }}"
+  register: asdf_plugins_result
+  when: asdf_plugins is defined
+  changed_when: false

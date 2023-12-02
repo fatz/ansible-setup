@@ -1,0 +1,18 @@
+
+# set osx defaults
+- name: OSX settings
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+    type: "{{ item.type }}"
+    state: present
+  loop: "{{ osx_settings }}"
+  when: ansible_os_family == 'Darwin'
+
+- name: Stop iTunes from responding to the keyboard media keys
+  community.general.launchd:
+    name: com.apple.rcd
+    state: stopped
+    enabled: no
+  when: ansible_os_family == 'Darwin'

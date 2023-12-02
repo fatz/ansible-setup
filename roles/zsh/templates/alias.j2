@@ -1,0 +1,4 @@
+# set alias
+{% for item in zsh_alias_map %}
+alias {{ item.name }}="{{ item.command }}"
+{% endfor %}

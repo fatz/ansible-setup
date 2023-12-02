@@ -1,0 +1,10 @@
+- name: install tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+
+- name: write static tmux config
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf
+  notify: install tmux plugins

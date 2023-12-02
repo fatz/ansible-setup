@@ -1,0 +1,24 @@
+export ZSH=$HOME/.oh-my-zsh
+
+# external plugins
+{% for plugin_path in oh_my_zsh_plugins_paths %}
+source {{ plugin_path }}
+{% endfor %}
+
+# option variables
+{% for option, value in oh_my_zsh_options.items() %}
+{{ option }}={{ value }}
+{% endfor %}
+
+# enable plugins
+plugins=(
+  {% for plugin in oh_my_zsh_plugins %}
+  {{ plugin }}
+  {% endfor %}
+)
+
+# enable themes
+ZSH_THEME="{{ oh_my_zsh_theme }}"
+
+
+source $ZSH/oh-my-zsh.sh

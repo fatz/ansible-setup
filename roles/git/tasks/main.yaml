@@ -1,0 +1,41 @@
+---
+# fail if defaults are not overwritten
+- name: fail if defaults are not overwritten
+  fail:
+    msg: "insert your personal data"
+  when: git_name == "John Doe" or git_email == "john.doe@example.com" or git_signing_key == "ABCDEF1234567890"
+
+# set git config
+- name: set git name
+  git_config:
+    name: user.name
+    value: "{{ git_name }}"
+    scope: global
+
+- name: set git email
+  git_config:
+    name: user.email
+    value: "{{ git_email }}"
+    scope: global
+
+- name: set git signing key
+  git_config:
+    name: user.signingkey
+    value: "{{ git_signing_key }}"
+    scope: global
+
+# sign commits
+- name: sign commits
+  git_config:
+    name: commit.gpgsign
+    value: true
+    scope: global
+
+# use github via ssh instead of https
+- name: use github via ssh instead of https
+  git_config:
+    name: url.git@github.com:.insteadOf
+    value: https://github.com
+    scope: global
+
+  

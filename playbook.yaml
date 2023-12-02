@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  roles:
+    - homefolder
+    - homebrew
+    - iterm2
+    - zsh
+    - tmux
+    - osx
+    - asdf
+    - enpass
+    - git

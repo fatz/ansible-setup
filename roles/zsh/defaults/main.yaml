@@ -1,0 +1,34 @@
+oh_my_zsh_plugins_paths:
+  - "$HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
+
+oh_my_zsh_theme: "crunch"
+
+oh_my_zsh_plugins:
+  - git
+  - fast-syntax-highlighting
+  # - zsh-history-substring-search
+
+oh_my_zsh_options:
+  DISABLE_AUTO_UPDATE: "true"
+
+zsh_alias_map:
+  - name: "k"
+    command: "kubectl"
+  - name: "l"
+    command: "ls -a"
+  - name: "la"
+    command: "ls -lah"
+  - name: "myextip"
+    command: "curl http://whatsmyip.akamai.com/"
+  - name: "enp"
+    command: "enpass-cli -vault ~/Library/Containers/in.sinew.Enpass-Desktop/Data/Documents/Vaults/primary"
+
+additional_path:
+  - "$HOME/bin"
+  - "$HOME/golang/bin"
+
+zsh_exports:
+  - name: "EDITOR"
+    value: "vim"
+  - name: "GOPATH"
+    value: "$HOME/golang"
