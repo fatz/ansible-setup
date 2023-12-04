@@ -57,6 +57,11 @@ osx_settings:
     key: showhidden
     value: true
     type: bool
+  # set dock position to left
+  - domain: com.apple.dock
+    key: orientation
+    value: left
+    type: string
   # enable hot corner top right to start screensaver
   - domain: com.apple.dock
     key: wvous-tr-corner
