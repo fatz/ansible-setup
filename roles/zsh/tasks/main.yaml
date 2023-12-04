@@ -16,7 +16,6 @@
     clone: yes
     update: no
 
-
 - name: generate oh-my-zsh config
   template:
     src: oh-my-zsh-template.j2

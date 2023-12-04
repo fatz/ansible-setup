@@ -5,8 +5,6 @@ oh_my_zsh_theme: "crunch"
 
 oh_my_zsh_plugins:
   - git
-  - fast-syntax-highlighting
-  # - zsh-history-substring-search
 
 oh_my_zsh_options:
   DISABLE_AUTO_UPDATE: "true"
