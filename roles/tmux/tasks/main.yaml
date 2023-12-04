@@ -2,6 +2,8 @@
   git:
     repo: https://github.com/tmux-plugins/tpm
     dest: ~/.tmux/plugins/tpm
+    clone: yes
+    update: no
 
 - name: write static tmux config
   copy:

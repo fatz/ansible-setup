@@ -13,6 +13,9 @@
   git:
     repo: https://github.com/ohmyzsh/ohmyzsh.git
     dest: ~/.oh-my-zsh
+    clone: yes
+    update: no
+
 
 - name: generate oh-my-zsh config
   template:
