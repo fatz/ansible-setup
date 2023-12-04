@@ -30,3 +30,5 @@ zsh_exports:
     value: "vim"
   - name: "GOPATH"
     value: "$HOME/golang"
+
+zsh_additional_exports: {}

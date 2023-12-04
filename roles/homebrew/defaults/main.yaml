@@ -26,6 +26,7 @@ homebrew_packages:
     - "krew"
     - "packer"
     - "sshuttle"
+    - "danielfoehrkn/switch/switch"
     - "telnet"
     - "tmux"
     - "reattach-to-user-namespace"

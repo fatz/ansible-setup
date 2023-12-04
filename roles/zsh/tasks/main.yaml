@@ -45,3 +45,9 @@
     src: path.j2
     dest: ~/.zshrc.d/40-path.zsh
     mode: 0644
+
+- name: add switcher config
+  template:
+    src: switcher.j2
+    dest: ~/.zshrc.d/50-switcher.zsh
+    mode: 0644

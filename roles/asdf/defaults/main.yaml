@@ -6,3 +6,6 @@ asdf_plugins:
   - "nodejs"
   - "ruby"
 
+asdf_additional_plugins: []
+
+asdf_additional_plugins_external: {}

@@ -2,3 +2,8 @@
 {% for item in zsh_exports %}
 export {{ item.name }}={{ item.value }}
 {% endfor %}
+
+# set additional exports
+{% for item in zsh_additional_exports %}
+export {{ item.name }}={{ item.value }}
+{% endfor %}

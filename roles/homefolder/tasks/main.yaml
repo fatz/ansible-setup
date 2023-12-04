@@ -22,3 +22,21 @@
     path: ~/Desktop/Screenshots
     state: directory
     mode: 0755
+
+- name: create .kube folder
+  file:
+    path: ~/.kube
+    state: directory
+    mode: 0755
+
+- name: create .kube/kubeconfig folder
+  file:
+    path: ~/.kube/kubeconfig
+    state: directory
+    mode: 0755
+
+- name: copy switcher config
+  copy:
+    src: switch-config.yaml
+    dest: ~/.kube/switch-config.yaml
+    mode: 0644

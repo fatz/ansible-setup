@@ -23,3 +23,52 @@
   register: asdf_plugins_result
   when: asdf_plugins is defined
   changed_when: false
+
+# add additional asdf plugins
+- name: install additional asdf plugins
+  command: asdf plugin add {{ item }}
+  loop: "{{ asdf_additional_plugins }}"
+  register: asdf_additional_plugins_result
+  when: asdf_additional_plugins is defined
+  changed_when: "'already added' not in asdf_additional_plugins_result.stdout"
+
+# install latest versions of additional asdf plugins
+- name: install latest versions of additional asdf plugins
+  command: asdf install {{ item }} latest
+  loop: "{{ asdf_additional_plugins }}"
+  register: asdf_additional_plugins_result
+  when: asdf_additional_plugins is defined
+  changed_when: "'already installed' not in asdf_additional_plugins_result.stdout"
+
+# set global latest versions of additional asdf plugins
+- name: set global latest versions of additional asdf plugins
+  command: asdf global {{ item }} latest
+  loop: "{{ asdf_additional_plugins }}"
+  register: asdf_additional_plugins_result
+  when: asdf_additional_plugins is defined
+  changed_when: false
+
+# add additional external asdf plugins
+- name: install additional external asdf plugins
+  command: asdf plugin add {{ item.name }} {{ item.repo }}
+  loop: "{{ asdf_additional_plugins_external }}"
+  register: asdf_additional_plugins_external_result
+  when: asdf_additional_plugins_external is defined
+  changed_when: "'already added' not in asdf_additional_plugins_external_result.stdout"
+
+# install latest versions of additional external asdf plugins
+- name: install latest versions of additional external asdf plugins
+  command: asdf install {{ item.name }} latest
+  loop: "{{ asdf_additional_plugins_external }}"
+  register: asdf_additional_plugins_external_result
+  when: asdf_additional_plugins_external is defined
+  changed_when: "'already installed' not in asdf_additional_plugins_external_result.stdout"
+
+# set global latest versions of additional external asdf plugins
+- name: set global latest versions of additional external asdf plugins
+  command: asdf global {{ item.name }} latest
+  loop: "{{ asdf_additional_plugins_external }}"
+  register: asdf_additional_plugins_external_result
+  when: asdf_additional_plugins_external is defined
+  changed_when: false
+
