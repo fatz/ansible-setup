@@ -1,0 +1,4 @@
+colima_cpu: 4
+colima_memory: 8G
+colima_disk: 50G
+colima_with_kubernetes: false

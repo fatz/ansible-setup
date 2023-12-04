@@ -1,0 +1,5 @@
+---
+- name: start colima
+  command: colima start --cpu {{ colima_cpu }} --memory {{ colima_memory }} --disk {{ colima_disk }} {{ '--with-kubernetes' if colima_with_kubernetes else '' }
+  register: colima_start
+  changed_when: colima_start.stdout.find('Starting VM') != -1

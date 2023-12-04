@@ -14,6 +14,8 @@ homebrew_packages:
     - "awscli"
     - "azure-cli"
     - "cmake"
+    - "colima"
+    - "docker"
     - "pkg-config"
     - "enpass-cli"
     - "gh"
