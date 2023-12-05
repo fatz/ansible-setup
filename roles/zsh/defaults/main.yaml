@@ -17,7 +17,7 @@ zsh_alias_map:
   - name: "la"
     command: "ls -lah"
   - name: "myextip"
-    command: "curl http://whatsmyip.akamai.com/"
+    command: "curl http://whatismyip.akamai.com/"
   - name: "enp"
     command: "enpass-cli -vault ~/Library/Containers/in.sinew.Enpass-Desktop/Data/Documents/Vaults/primary"
 
