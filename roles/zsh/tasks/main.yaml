@@ -51,3 +51,9 @@
     src: switcher.j2
     dest: ~/.zshrc.d/50-switcher.zsh
     mode: 0644
+
+- name: add colima
+  template:
+    src: colima.j2
+    dest: ~/.zshrc.d/60-colima.zsh
+    mode: 0644

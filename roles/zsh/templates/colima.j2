@@ -1,0 +1,11 @@
+if command -v colima &> /dev/null
+then
+    # check colima status. Start if not running
+    if ! colima status &> /dev/null
+    then
+        colima start
+    fi
+
+    # add colima auto-completion
+    eval "$(colima completion zsh)"
+fi
