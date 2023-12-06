@@ -23,7 +23,7 @@ zsh_alias_map:
   - name: "sudorsync"
     command: "rsync -a -e \"ssh -i ~/.ssh/id_rsa\" --rsync-path=\"sudo rsync\""
   - name: "cdgit"
-    command: "cd ~/golang/src
+    command: "cd ~/golang/src"
 
 additional_path:
   - "$HOME/bin"
