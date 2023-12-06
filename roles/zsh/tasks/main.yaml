@@ -57,3 +57,9 @@
     src: colima.j2
     dest: ~/.zshrc.d/60-colima.zsh
     mode: 0644
+
+- name: add vscode
+  template:
+    src: vscode.j2
+    dest: ~/.zshrc.d/70-vscode.zsh
+    mode: 0644

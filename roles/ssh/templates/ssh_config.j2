@@ -1,0 +1,9 @@
+# managed by ansible
+# DO NOT EDIT MANUALLY
+
+{% for item in ssh_user_config %}
+Host {{ item.host }}
+{% for option in item.options %}
+    {{ option }}
+{% endfor %}
+{% endfor %}
