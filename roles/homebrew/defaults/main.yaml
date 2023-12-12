@@ -20,6 +20,7 @@ homebrew_packages:
     - "enpass-cli"
     - "gh"
     - "gpg"
+    - "govc"
     - "jq"
     - "k9s"
     - "kind"
