@@ -20,6 +20,8 @@ homebrew_packages:
     - "enpass-cli"
     - "gh"
     - "gpg"
+    - "mitchellh/gon/gon"
+    - "goreleaser"
     - "govc"
     - "jq"
     - "k9s"
