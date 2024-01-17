@@ -28,6 +28,7 @@ zsh_alias_map:
 additional_path:
   - "$HOME/bin"
   - "$HOME/golang/bin"
+  - "${KREW_ROOT:-$HOME/.krew}/bin"
 
 zsh_exports:
   - name: "EDITOR"
